@@ -8,66 +8,12 @@ public class LifehackRegistry {
 
     public static List<LifehackSite> getSites() {
         return List.of(
-                // teamteachers
-                new LifehackSite(
-                        "Filosoffernes hjørne",
-                        "Få et råd",
-                        "/philosophers",
-                        "/images/teamteachers/socrates.jpg"
-                ),
-
-                new LifehackSite(
-                        "Planlæg Dit Event",
-                        "Event Planner",
-                        "/eventPlanner",
-                        "/images/teamc/event-kort.png" ) ,
-
-                new LifehackSite(
-                        "RcadeGB",
-                        "Match a colour",
-                        "/rcade",
-                        "/images/teama/rcade-logo.svg"
-                ),
-
-                // Team B
-                new LifehackSite(
-                        "Memory game",
-                        "Vend dit hack",
-                        "/memorygame",
-                        "/images/teamb/memo-logo.png"
-                ),
-                /*,
-
-                // Team A
-                new LifehackSite(
-                        "Team A's Lifehack",
-                        "Prøv det her",
-                        "/teama",
-                        "/images/teama/logo.png"
-                )*/
-
-                // Team D
-                new LifehackSite(
-                        "PerfectFit",
-                        "Find din perfekte BH-størrelse",
-                        "/perfectfit",
-                        "/images/teamd/perfectfit-logo.svg"
-                 ),
-
                 // Team E
                 new LifehackSite(
                         "SecurePass",
                         "Skab stærkere passwords",
                         "/securepass",
                         "/images/teame/securepass-logo.svg"
-                ),
-
-                // Team F
-                new LifehackSite(
-                        "Hokus Fokus",
-                        "Fokuser på en opgave ad gangen",
-                        "/hokusfokus",
-                        "/images/teamf/pixelatedbackground.png"
                 )
         );
 

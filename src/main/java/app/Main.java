@@ -2,16 +2,7 @@ package app;
 
 import app.configuration.ThymeleafConfig;
 import app.controllers.MainController;
-import app.controllers.teamc.CommentController;
-import app.controllers.teamc.PollController;
-import app.controllers.teamc.UserEventController;
-import app.controllers.teamd.PerfectFitController;
-import app.controllers.teama.GameController;
-import app.controllers.teamc.EventController;
-import app.controllers.teamb.MemoController;
 import app.controllers.teame.PasswordController;
-import app.controllers.teamf.TaskController;
-import app.controllers.teamteachers.QuoteController;
 import app.persistence.ConnectionPool;
 import io.javalin.Javalin;
 import io.javalin.rendering.template.JavalinThymeleaf;
@@ -29,19 +20,7 @@ public class Main {
             config.staticFiles.add("/public");
             config.fileRenderer(new JavalinThymeleaf(ThymeleafConfig.templateEngine()));
             new MainController().setRoutes(config); // Fælles controller
-            // TODO: registrér jeres egen controller endpoints herunder
-            new QuoteController(connectionPool).setRoutes(config); // Teacher app Controller
-
-            new EventController(connectionPool).setRoutes(config);
-            new GameController(connectionPool).setRoutes(config); //Team a app Controller
-            new PerfectFitController(connectionPool).setRoutes(config);
-            new MemoController(connectionPool).setRoutes(config); //Team b app Controller
-            new UserEventController(connectionPool).setRoutes(config); // Team c
-            new PollController(connectionPool).setRoutes(config); // Team c
-            new PasswordController(connectionPool).setRoutes(config);//team e app Controller
-            new TaskController(connectionPool).setRoutes(config); // Team f
-            new CommentController(connectionPool).setRoutes(config);
-            // TODO: Husk også at registrere jeres forside i LifehackRegistry klassen
+            new PasswordController(connectionPool).setRoutes(config); // Team E - SecurePass
         }).start(7070);
 
     }
